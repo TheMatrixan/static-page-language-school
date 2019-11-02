@@ -1,0 +1,122 @@
+.shadow-wave {
+  position: absolute;
+  top: -350px;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+
+  @include respond-below(lg) {
+    top: -150px;
+  }
+  @include respond-below(sm) {
+    top: -150px;
+  }
+}
+
+.testimonials {
+  padding: 100px 0;
+  position: relative;
+  margin-bottom: -300px;
+  z-index: 1;
+
+  &-heading {
+    padding: 50px 80px 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    h2 {
+      font-size: 3.65rem;
+      font-weight: 900;
+      color: $primary-color;
+      line-height: 1;
+    }
+    @include respond-below(md) {
+      text-align: center;
+      justify-content: center;
+      padding: 50px 15px;
+    }
+  }
+
+  &-description {
+    color: $text-color;
+    font-size: 1.25rem;
+    line-height: 1.35;
+    word-break: break-word;
+    word-wrap: break-word;
+  }
+}
+
+.btn-testimonials {
+  display: inline-flex;
+  background: #fff;
+  padding: 23px 50px;
+  box-shadow: 0 3px 34px rgba(0, 0, 0, 0.16);
+  margin: 60px 20px 30px;
+  font-weight: 900;
+  color: $text-color;
+  border-radius: 50px;
+  transition: 0.3s;
+  text-align: center;
+
+  &:focus,
+  &:hover {
+    background: $primary-color;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.story {
+  background: #fff;
+  padding: 50px 10px 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 3px 25px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+
+  @include respond-below(sm) {
+    flex-direction: column-reverse;
+    padding: 20px 20px;
+  }
+
+  &-image {
+    flex: 0 0 150px;
+    margin-top: -30px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond-below(sm) {
+      margin-top: 0;
+    }
+
+    img {
+      max-width: 150px;
+    }
+  }
+
+  &-fullname {
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: $text-color;
+    margin: 0.9rem 0;
+  }
+
+  &-description {
+    font-size: 1.125rem;
+    line-height: 1;
+    word-break: break-word;
+    word-wrap: break-word;
+  }
+}
+
+.quote svg {
+  fill: #2e1888;
+  width: 50px;
+  height: 100%;
+  margin: -20px 0 20px 0;
+}

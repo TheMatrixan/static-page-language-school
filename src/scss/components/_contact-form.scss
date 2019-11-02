@@ -1,0 +1,140 @@
+#contact-form {
+  background: #ecf7fd;
+  padding: 100px 0 150px;
+}
+
+.contact-form-wrapper {
+  padding: 50px 70px;
+  background: #fff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: $text-color;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  margin: 10px 0;
+  width: 100%;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  & > span {
+    margin-bottom: 10px;
+  }
+
+  input,
+  textarea {
+    padding: 15px 20px;
+    border: 1px solid rgba(14, 46, 70, 0.4);
+    width: 100%;
+    border-radius: 3px;
+    color: $text-color;
+    font-size: 0.875rem;
+
+    &::-webkit-input-placeholder {
+      font-size: 0.875rem;
+      opacity: 0.9;
+    }
+    &::-moz-placeholder {
+      font-size: 0.875rem;
+      opacity: 0.9;
+    }
+    &::-ms-placeholder {
+      font-size: 0.875rem;
+      opacity: 0.9;
+    }
+    &::placeholder {
+      font-size: 0.875rem;
+      opacity: 0.9;
+    }
+    &:-ms-input-placeholder {
+      font-size: 0.875rem;
+      opacity: 0.9;
+    }
+  }
+
+  .required {
+    color: var(--red);
+    font-size: 1.25rem;
+    line-height: 1;
+    font-weight: 900;
+  }
+}
+
+.btn-contact {
+  background: $primary-color;
+  width: 100%;
+  color: #fff;
+  margin: 10px 0 0;
+  font-weight: bold;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    text-decoration: none;
+    background: $text-color;
+  }
+}
+
+.contact-image {
+  display: flex;
+  justify-content: center;
+  margin: -50px 0 30px;
+
+  img {
+    width: auto;
+    max-height: 250px;
+  }
+}
+
+.contact-info {
+  margin-top: 30px;
+
+  .contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px 0;
+  }
+
+  h5 {
+    color: $text-color;
+    font-weight: 900;
+    margin-bottom: 10px;
+  }
+
+  .contact-details {
+    color: $text-color;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+
+  .contact-link {
+    display: inline-block;
+    color: $text-color;
+    margin-bottom: 10px;
+    font-weight: 500;
+
+    .icon {
+      margin-right: 10px;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: $secondary-color;
+    }
+  }
+}

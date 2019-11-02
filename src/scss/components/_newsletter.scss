@@ -1,0 +1,94 @@
+#newsletter {
+  padding: 200px 0 50px;
+  color: #fff;
+  background-image: url(./img/newsletter-books.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  @include respond-below(lg) {
+    padding-top: 250px;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(3, 22, 37, 0.8);
+  }
+
+  & > .container {
+    padding: 40px 15px;
+    background: rgba(3, 22, 37, 0.8);
+    border-radius: 10px;
+    z-index: 2;
+    position: relative;
+  }
+}
+
+.newsletter-content {
+  text-align: right;
+  padding-left: 100px;
+
+  & span {
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+    font-weight: 300;
+  }
+
+  & h4 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  @include respond-below(md) {
+    text-align: center;
+    padding: 0 40px 20px;
+  }
+}
+
+.newsletter-input {
+  padding: 15px 40px 15px 10px;
+  border: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin: 0;
+  height: 50px;
+  font-size: 1.125rem;
+}
+
+.btn-newsletter {
+  height: 50px;
+  margin: 0;
+  background: $primary-color;
+  border: none;
+  color: #fff;
+  padding: 0 20px;
+  font-weight: bold;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.newsletter-form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  @include respond-below(md) {
+    justify-content: center;
+  }
+
+  form {
+    display: flex;
+    @include respond-below(xs) {
+      flex-direction: column;
+    }
+  }
+}

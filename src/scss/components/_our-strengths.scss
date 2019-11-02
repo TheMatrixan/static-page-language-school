@@ -1,0 +1,97 @@
+#our-strengths {
+  padding: 100px 0;
+  z-index: 2;
+  position: relative;
+}
+
+.strength-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 30px;
+  @include respond-below(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include respond-below(xs) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.strength-item {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  transition: box-shadow 0.5s, background-color 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+  color: $text-color;
+
+  &:hover,
+  &:focus {
+    color: $text-color;
+    text-decoration: none;
+    background-color: #fff;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.strength-number {
+  font-size: 6.5rem;
+  font-weight: 900;
+  color: #e7e7e7;
+}
+
+.strength-link {
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: $primary-color;
+  padding: 5px 0 20px;
+  &,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.strength-content {
+  font-size: 1.025rem;
+  line-height: 1.25rem;
+}
+
+.strengths-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+
+  &:hover a {
+    padding-right: 20px;
+
+    &:after {
+      opacity: 1;
+      right: 0;
+    }
+  }
+
+  & a {
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 1px solid;
+    padding-bottom: 9px;
+    text-decoration: none;
+    color: $primary-color;
+    position: relative;
+    transition: padding 0.3s;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:after {
+      content: "→";
+      position: absolute;
+      top: 0;
+      right: 0;
+      opacity: 0;
+      transition: all 0.3s;
+    }
+  }
+}
